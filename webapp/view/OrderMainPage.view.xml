@@ -74,7 +74,7 @@
             <ColumnListItem id="clistOrders" vAlign="Middle" type="Navigation" press="onPressOrder">
                 <cells>
                     <Text id="colOrderNum" text="{OrderID}"/>
-                    <Text id="colCreateDat" text="{CreationDate}"/>
+                    <Text id="colCreateDat" text="{path: 'CreationDate', formatter: '.formatter.dateFormatter'}"/>
                     <Text id="colRecPlant" text="{RecPlantID} - {RecPlantDesc} "/>
                     <Text id="colDelPlant" text="{DelPlantID} - {DelPlantDesc}" /> 
                 <ObjectStatus id="objStatus" text="{Status}" state="{ path: 'Status', formatter: '.formatter.statusValueState' }" />                                      
