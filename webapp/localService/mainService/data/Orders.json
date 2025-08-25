@@ -3,7 +3,7 @@
         "CreationDate": "/Date(1109849603000)/",
         "RecPlantDesc": "RecPlantDesc1",
         "DelPlantDesc": "DelPlantDesc1",
-        "Status": "Status1",
+        "Status": "Created",
         "OrderID": 889050933,
         "RecPlantID": 226571191,
         "DelPlantID": 99830736
@@ -12,7 +12,7 @@
         "CreationDate": "/Date(635837133000)/",
         "RecPlantDesc": "RecPlantDesc2",
         "DelPlantDesc": "DelPlantDesc2",
-        "Status": "Status2",
+        "Status": "Released",
         "OrderID": 385019354,
         "RecPlantID": 514545892,
         "DelPlantID": 43361060
@@ -21,7 +21,7 @@
         "CreationDate": "/Date(1152817921000)/",
         "RecPlantDesc": "RecPlantDesc3",
         "DelPlantDesc": "DelPlantDesc3",
-        "Status": "Status3",
+        "Status": "Partially Completed",
         "OrderID": 433146440,
         "RecPlantID": 965884614,
         "DelPlantID": 1057597623
@@ -30,7 +30,7 @@
         "CreationDate": "/Date(1389209788000)/",
         "RecPlantDesc": "RecPlantDesc4",
         "DelPlantDesc": "DelPlantDesc4",
-        "Status": "Status4",
+        "Status": "Delivered",
         "OrderID": 864278382,
         "RecPlantID": 1488663592,
         "DelPlantID": 530066334
@@ -39,7 +39,7 @@
         "CreationDate": "/Date(199268750000)/",
         "RecPlantDesc": "RecPlantDesc5",
         "DelPlantDesc": "DelPlantDesc5",
-        "Status": "Status5",
+        "Status": "Delivered",
         "OrderID": 409562974,
         "RecPlantID": 2101998722,
         "DelPlantID": 750725370
@@ -48,7 +48,7 @@
         "CreationDate": "/Date(1285830716000)/",
         "RecPlantDesc": "RecPlantDesc6",
         "DelPlantDesc": "DelPlantDesc6",
-        "Status": "Status6",
+        "Status": "Created",
         "OrderID": 1068395281,
         "RecPlantID": 1325808964,
         "DelPlantID": 1958633952
@@ -57,7 +57,7 @@
         "CreationDate": "/Date(789544125000)/",
         "RecPlantDesc": "RecPlantDesc7",
         "DelPlantDesc": "DelPlantDesc7",
-        "Status": "Status7",
+        "Status": "Released",
         "OrderID": 1288278027,
         "RecPlantID": 1886569289,
         "DelPlantID": 1142085058
@@ -66,7 +66,7 @@
         "CreationDate": "/Date(1068144135000)/",
         "RecPlantDesc": "RecPlantDesc8",
         "DelPlantDesc": "DelPlantDesc8",
-        "Status": "Status8",
+        "Status": "Partially Completed",
         "OrderID": 1798323616,
         "RecPlantID": 1609074287,
         "DelPlantID": 686754306
@@ -75,7 +75,7 @@
         "CreationDate": "/Date(154727751000)/",
         "RecPlantDesc": "RecPlantDesc9",
         "DelPlantDesc": "DelPlantDesc9",
-        "Status": "Status9",
+        "Status": "Delivered",
         "OrderID": 968768938,
         "RecPlantID": 1699600505,
         "DelPlantID": 1316748346
@@ -84,99 +84,10 @@
         "CreationDate": "/Date(1207774274000)/",
         "RecPlantDesc": "RecPlantDesc10",
         "DelPlantDesc": "DelPlantDesc10",
-        "Status": "Status10",
+        "Status": "Delivered",
         "OrderID": 120139722,
         "RecPlantID": 612795583,
         "DelPlantID": 1635712260
-    },
-    {
-        "CreationDate": "/Date(163597427000)/",
-        "RecPlantDesc": "RecPlantDesc11",
-        "DelPlantDesc": "DelPlantDesc11",
-        "Status": "Status11",
-        "OrderID": 409276063,
-        "RecPlantID": 1768771767,
-        "DelPlantID": 925952795
-    },
-    {
-        "CreationDate": "/Date(1351010591000)/",
-        "RecPlantDesc": "RecPlantDesc12",
-        "DelPlantDesc": "DelPlantDesc12",
-        "Status": "Status12",
-        "OrderID": 55347255,
-        "RecPlantID": 478444200,
-        "DelPlantID": 265909378
-    },
-    {
-        "CreationDate": "/Date(34233145000)/",
-        "RecPlantDesc": "RecPlantDesc13",
-        "DelPlantDesc": "DelPlantDesc13",
-        "Status": "Status13",
-        "OrderID": 239385279,
-        "RecPlantID": 446135234,
-        "DelPlantID": 212687691
-    },
-    {
-        "CreationDate": "/Date(8705651000)/",
-        "RecPlantDesc": "RecPlantDesc14",
-        "DelPlantDesc": "DelPlantDesc14",
-        "Status": "Status14",
-        "OrderID": 1273719233,
-        "RecPlantID": 1935413062,
-        "DelPlantID": 419415332
-    },
-    {
-        "CreationDate": "/Date(1265995777000)/",
-        "RecPlantDesc": "RecPlantDesc15",
-        "DelPlantDesc": "DelPlantDesc15",
-        "Status": "Status15",
-        "OrderID": 1476310515,
-        "RecPlantID": 1015942314,
-        "DelPlantID": 1898205730
-    },
-    {
-        "CreationDate": "/Date(1124506912000)/",
-        "RecPlantDesc": "RecPlantDesc16",
-        "DelPlantDesc": "DelPlantDesc16",
-        "Status": "Status16",
-        "OrderID": 659900013,
-        "RecPlantID": 760662215,
-        "DelPlantID": 1643480634
-    },
-    {
-        "CreationDate": "/Date(829286601000)/",
-        "RecPlantDesc": "RecPlantDesc17",
-        "DelPlantDesc": "DelPlantDesc17",
-        "Status": "Status17",
-        "OrderID": 1894399205,
-        "RecPlantID": 351974666,
-        "DelPlantID": 1230569734
-    },
-    {
-        "CreationDate": "/Date(151437548000)/",
-        "RecPlantDesc": "RecPlantDesc18",
-        "DelPlantDesc": "DelPlantDesc18",
-        "Status": "Status18",
-        "OrderID": 15231885,
-        "RecPlantID": 2061806441,
-        "DelPlantID": 515849076
-    },
-    {
-        "CreationDate": "/Date(596992461000)/",
-        "RecPlantDesc": "RecPlantDesc19",
-        "DelPlantDesc": "DelPlantDesc19",
-        "Status": "Status19",
-        "OrderID": 558548486,
-        "RecPlantID": 1030758211,
-        "DelPlantID": 478092297
-    },
-    {
-        "CreationDate": "/Date(258203630000)/",
-        "RecPlantDesc": "RecPlantDesc20",
-        "DelPlantDesc": "DelPlantDesc20",
-        "Status": "Status20",
-        "OrderID": 1895786917,
-        "RecPlantID": 1496518109,
-        "DelPlantID": 1009923309
     }
+
 ]

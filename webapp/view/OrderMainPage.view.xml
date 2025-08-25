@@ -38,11 +38,51 @@
         </fb:FilterBar>
         </f:content>
 
-        <f:content>
-        </f:content>
-
         </f:DynamicPageHeader>
-        </f:header>
+        </f:header>        
+
+        <f:content>
+        <Table id="tblOrders" mode="MultiSelect" items="{ path: '/Orders', sorter: { path: 'OrderID'} }"> 
+        <headerToolbar>
+            <Toolbar id="tbOrder">
+                <Text id="txtOrder" text="Orders"/>
+                <ToolbarSpacer id="tbSpacer" />
+                <Button id="btnAdd" icon="sap-icon://add" tooltip="Create" press="onPressCreate" />
+                <Button id="btnDelete" icon="sap-icon://delete" tooltip="Delete" press="onPressDelete" /> 
+            </Toolbar>
+        </headerToolbar>
+
+        <columns>
+            <Column id="colIDOrderNum">
+                <Text id="txtOrderNum" text="Order Number" />
+            </Column>
+            <Column id="colIDCreateDate">
+                <Text id="txtCreateDate" text="Creation Date" />
+            </Column>
+            <Column id="colIDRecPlant">
+                <Text id="txtRecPlant" text="Receiving Plant" />
+            </Column>
+            <Column id="colIDDelPlant">
+                <Text id="txtDelPlant" text="Delivering Plant" />
+            </Column>
+            <Column id="colIDStatus">
+                <Text id="txtStatus" text="Status" />
+            </Column>
+        </columns>
+
+        <items>
+            <ColumnListItem id="clistOrders" vAlign="Middle" type="Navigation" press="onPressOrder">
+                <cells>
+                    <Text id="colOrderNum" text="{OrderID}"/>
+                    <Text id="colCreateDat" text="{CreationDate}"/>
+                    <Text id="colRecPlant" text="{RecPlantID} - {RecPlantDesc} "/>
+                    <Text id="colDelPlant" text="{DelPlantID} - {DelPlantDesc}" /> 
+                <ObjectStatus id="objStatus" text="{Status}" state="{ path: 'Status', formatter: '.formatter.statusValueState' }" />                                      
+                </cells>
+            </ColumnListItem>
+        </items>
+        </Table>        
+       </f:content>
 
     </f:DynamicPage>
     </Page>
