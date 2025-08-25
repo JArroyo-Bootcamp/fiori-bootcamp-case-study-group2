@@ -71,7 +71,7 @@
         </columns>
 
         <items>
-            <ColumnListItem id="clistOrders" vAlign="Middle" type="Navigation" press="onPressOrder">
+            <ColumnListItem id="clistOrders" vAlign="Middle" type="Navigation" press=".onPressOrder">
                 <cells>
                     <Text id="colOrderNum" text="{OrderID}"/>
                     <Text id="colCreateDat" text="{path: 'CreationDate', formatter: '.formatter.dateFormatter'}"/>
