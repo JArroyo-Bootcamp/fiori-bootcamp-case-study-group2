@@ -4,38 +4,36 @@
     xmlns:core="sap.ui.core"
     xmlns:form="sap.ui.layout.form">
 
-    <Page id="editPage" title="Edit Order" floatingFooter="true">
+    <Page id="editPage" title="{i18n>editOrderTitle}" floatingFooter="true">
 
-        <!-- Order Details Section -->
         <VBox id="vbOrderEdit" class="sapUiMediumMarginTop sapUiLargeMarginBeginEnd sapUiSmallMarginBottom">
-            <Panel id="pnlOrderEditInfo" headerText="Order Details">
+            <Panel id="pnlOrderEditInfo" headerText="{i18n>orderDetails}">
                 <content>
                     <form:SimpleForm id="orderEditForm" editable="true" layout="ResponsiveLayout" class="sapUiLargeMarginStart">
-                        <Label id="lblOrderNumberE" text="Order Number" />
+                        <Label id="lblOrderNumberE" text="{i18n>orderNumber}" />
                         <Input id="inpOrderNumberE" value="{OrderID}" editable="false" width="60%" />
 
-                        <Label id="lblCreatedOnE" text="Created On" />
+                        <Label id="lblCreatedOnE" text="{i18n>createdOn}" />
                         <Input id="inpCreatedOnE" value="{path: 'CreationDate', formatter: '.formatter.dateFormatter'}" editable="false" width="60%" />
 
-                        <Label id="lblReceivingPlantE" text="Receiving Plant" />
+                        <Label id="lblReceivingPlantE" text="{i18n>receivingPlant}" />
                         <Input id="inpReceivingPlantE" value="{RecPlantID} - {RecPlantDesc}" editable="false" width="60%" />
 
-                        <Label id="lblDeliveringPlantE" text="Delivering Plant" />
+                        <Label id="lblDeliveringPlantE" text="{i18n>deliveringPlant}" />
                         <Input id="inpDeliveringPlantE" value="{DelPlantID} - {DelPlantDesc}" editable="false" width="60%" />
 
-                        <Label id="lblStatusE" text="Status" />
+                        <Label id="lblStatusE" text="{i18n>status}" />
                         <ComboBox id="statusMCBEdit" width="60%" selectedKey="{Status}">
-                            <core:Item id="itemCreatedE" key="Created" text="Created"/>
-                            <core:Item id="itemReleasedE" key="Released" text="Released"/>
-                            <core:Item id="itemPartialCompE" key="Partially Completed" text="Partially Completed"/>
-                            <core:Item id="itemDeliveredE" key="Delivered" text="Delivered"/>
+                            <core:Item id="itemCreatedE" key="Created" text="{i18n>statusCreated}"/>
+                            <core:Item id="itemReleasedE" key="Released" text="{i18n>statusReleased}"/>
+                            <core:Item id="itemPartialCompE" key="Partially Completed" text="{i18n>statusPartiallyCompleted}"/>
+                            <core:Item id="itemDeliveredE" key="Delivered" text="{i18n>statusDelivered}"/>
                         </ComboBox>
                     </form:SimpleForm>
                 </content>
             </Panel>
         </VBox>
 
-        <!-- Product Section -->
         <VBox id="vbProductEdit" class="sapUiLargeMarginBeginEnd">
             <Panel id="productPanelEdit" 
                 headerText="{parts: [{path: 'OrderItems'}], formatter: '.formatter.productCounter'}"
@@ -45,16 +43,16 @@
                     <Toolbar id="tbProductEdit">
                         <Title id="titleProductEdit" text="{parts: [{path: 'OrderItems'}], formatter: '.formatter.productCounter'}" />
                         <ToolbarSpacer id="tbSpacerProductEdit"/>
-                        <Button id="btnAddProductE" icon="sap-icon://add" type="Transparent" press="onAddProduct" tooltip="Add Product" />
-                        <Button id="btnDeleteProductE" icon="sap-icon://delete" type="Transparent" press="onDeleteProduct" tooltip="Delete Product" />
+                        <Button id="btnAddProductE" icon="sap-icon://add" type="Transparent" press="onAddProduct" tooltip="{i18n>addProduct}" />
+                        <Button id="btnDeleteProductE" icon="sap-icon://delete" type="Transparent" press="onDeleteProduct" tooltip="{i18n>deleteProduct}" />
                     </Toolbar>
                 </headerToolbar>
                 <Table id="tblProductEdit" items="{OrderItems}" inset="false" mode="MultiSelect">
                     <columns>
-                        <Column id="colProductNameE"><Text id="txtColProductNameE" text="Product Name" /></Column>
-                        <Column id="colQuantityE"><Text id="txtColQuantityE" text="Quantity" /></Column>
-                        <Column id="colPricePerQtyE"><Text id="txtColPricePerQtyE" text="Price Per Quantity" /></Column>
-                        <Column id="colTotalPriceE"><Text id="txtColTotalPriceE" text="Total Price" /></Column>
+                        <Column id="colProductNameE"><Text id="txtColProductNameE" text="{i18n>productName}" /></Column>
+                        <Column id="colQuantityE"><Text id="txtColQuantityE" text="{i18n>quantity}" /></Column>
+                        <Column id="colPricePerQtyE"><Text id="txtColPricePerQtyE" text="{i18n>pricePerQuantity}" /></Column>
+                        <Column id="colTotalPriceE"><Text id="txtColTotalPriceE" text="{i18n>totalPrice}" /></Column>
                     </columns>
                     <items>
                         <ColumnListItem id="cliProductE" type="Active">
@@ -70,12 +68,11 @@
             </Panel>
         </VBox>
 
-        <!-- Footer -->
         <footer>
             <Toolbar id="tbFooterE">
                 <ToolbarSpacer id="tbsFooterE" />
-                <Button id="btnSaveE" text="Save" type="Emphasized" press="onSavePress" />
-                <Button id="btnCancelE" text="Cancel" type="Reject" press="onCancelPress" />
+                <Button id="btnSaveE" text="{i18n>save}" type="Emphasized" press="onSavePress" />
+                <Button id="btnCancelE" text="{i18n>cancel}" type="Reject" press="onCancelPress" />
             </Toolbar>
         </footer>
 
