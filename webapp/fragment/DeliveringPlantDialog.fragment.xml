@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog id="selectDialog2"
+		noDataText="No Products Found"
+		title="Select Product"
+		search=".onSearch"
+		searchPlaceholder="Search Products"
+		confirm=".onValueHelpDialogClose2"
+		cancel=".onValueHelpDialogClose2"
+		showClearButton="true"
+		items="{
+			path: '/DelPlants',
+			sorter: {
+				path: 'Name',
+				descending: false
+			}
+		}">
+		<StandardListItem id="standardListItem2"
+			selected="{selected}"
+			title="{DelPlantID}"
+			description="{DelPlantDesc}"
+			icon="{ProductPicUrl}"
+			iconDensityAware="false"
+			iconInset="false"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>

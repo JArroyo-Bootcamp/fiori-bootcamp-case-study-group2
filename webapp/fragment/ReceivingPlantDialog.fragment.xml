@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog id="selectDialog"
+		noDataText="No Products Found"
+		title="Select Product"
+		search=".onSearch"
+		searchPlaceholder="Search Products"
+		confirm=".onValueHelpDialogClose"
+		cancel=".onValueHelpDialogClose"
+		showClearButton="true"
+		items="{
+			path: '/RecPlants',
+			sorter: {
+				path: 'Name',
+				descending: false
+			}
+		}">
+		<StandardListItem id="standardListItem"
+			selected="{selected}"
+			title="{RecPlantID}"
+			description="{RecPlantDesc}"
+			icon="{ProductPicUrl}"
+			iconDensityAware="false"
+			iconInset="false"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>

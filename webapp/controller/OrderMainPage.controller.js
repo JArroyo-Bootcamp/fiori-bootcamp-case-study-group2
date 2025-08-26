@@ -134,6 +134,11 @@ sap.ui.define([
             this.getOwnerComponent().getRouter().navTo("RouteDetailPage", {
                 OrderID: sOrderId
             });
+        },
+
+        onPressCreate: function () {
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteCreateOrderPage");
         }
     });
 });

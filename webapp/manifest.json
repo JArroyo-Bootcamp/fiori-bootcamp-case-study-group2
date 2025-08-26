@@ -109,7 +109,14 @@
           "target": [
             "TargetOrderEditPage"
           ]
-        }
+        },
+        {
+          "name": "RouteCreateOrderPage",
+          "pattern": "CreateOrderPage",
+          "target": [
+            "TargetCreateOrderPage"
+          ]
+        }     
       ],
       "targets": {
         "TargetOrderMainPage": {
@@ -124,6 +131,11 @@
         "TargetOrderEditPage": {                
           "id": "OrderEditPage",
           "name": "OrderEditPage",
+          "viewType": "XML"
+        },
+        "TargetCreateOrderPage": {
+          "id": "CreateOrderPage",
+          "name": "CreateOrderPage",
           "viewType": "XML"
         }
       }
