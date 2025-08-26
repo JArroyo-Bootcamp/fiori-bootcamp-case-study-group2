@@ -15,8 +15,8 @@ xmlns:sap="http://www.sap.com/Protocols/SAPData">
             <Key>
                 <PropertyRef Name="OrderID"/>
             </Key>              
-            <Property Name="OrderID" Type="Edm.Int32" MaxLength="40" Nullable="false" sap:label="Order Number" />              
-            <Property Name="CreationDate" Type="Edm.Date" Nullable="false" sap:label="Creation Date"/>
+            <Property Name="OrderID" Type="Edm.Int32" Nullable="false" sap:label="Order Number" />              
+            <Property Name="CreationDate" Type="Edm.String" Nullable="false" sap:label="Creation Date"/>
             <Property Name="RecPlantID"  Type="Edm.Int32" Nullable="false" sap:label="Receiving Plant ID"/>
             <Property Name="RecPlantDesc" Type="Edm.String" Nullable="false" sap:label="Receiving Plant Desc"/>            
             <Property Name="DelPlantID" Type="Edm.Int32" Nullable="false" sap:label="Delivering Plant ID"/>
@@ -33,7 +33,7 @@ xmlns:sap="http://www.sap.com/Protocols/SAPData">
                 <PropertyRef Name="OrderID"/>
                 <PropertyRef Name="ProductName"/>                
             </Key>
-            <Property Name="OrderID" Type="Edm.Int32" MaxLength="40" Nullable="false" sap:label="Order Number"/>
+            <Property Name="OrderID" Type="Edm.Int32" Nullable="false" sap:label="Order Number"/>
             <Property Name="ProductName" Type="Edm.String" Nullable="false" sap:label="Product Name"/>
             <Property Name="Quantity" Type="Edm.Int32" Nullable="false" sap:label="Quantity"/>
             <Property Name="PricePerQty" Type="Edm.Decimal" Nullable="false" sap:label="Price Per Quantity"/>

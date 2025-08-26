@@ -1,93 +1,56 @@
 [
     {
-        "CreationDate": "/Date(1109849603000)/",
-        "RecPlantDesc": "RecPlantDesc1",
-        "DelPlantDesc": "DelPlantDesc1",
+        "CreationDate": "2025-08-01",
+        "RecPlantDesc": "Singapore",
+        "DelPlantDesc": "Malaysia",
         "Status": "Created",
-        "OrderID": 889050933,
-        "RecPlantID": 226571191,
-        "DelPlantID": 99830736
+        "OrderID": 12201,
+        "RecPlantID": 9101,
+        "DelPlantID": 9102
     },
     {
-        "CreationDate": "/Date(635837133000)/",
-        "RecPlantDesc": "RecPlantDesc2",
-        "DelPlantDesc": "DelPlantDesc2",
+        "CreationDate": "2025-08-05",
+        "RecPlantDesc": "Singapore",
+        "DelPlantDesc": "Malaysia",
         "Status": "Released",
-        "OrderID": 385019354,
-        "RecPlantID": 514545892,
-        "DelPlantID": 43361060
+        "OrderID": 12202,
+        "RecPlantID": 9101,
+        "DelPlantID": 9102
     },
     {
-        "CreationDate": "/Date(1152817921000)/",
-        "RecPlantDesc": "RecPlantDesc3",
-        "DelPlantDesc": "DelPlantDesc3",
+        "CreationDate": "2025-08-07",
+        "RecPlantDesc": "Singapore",
+        "DelPlantDesc": "Malaysia",
         "Status": "Partially Completed",
-        "OrderID": 433146440,
-        "RecPlantID": 965884614,
-        "DelPlantID": 1057597623
+        "OrderID": 12203,
+        "RecPlantID": 9101,
+        "DelPlantID": 9102
     },
     {
-        "CreationDate": "/Date(1389209788000)/",
-        "RecPlantDesc": "RecPlantDesc4",
-        "DelPlantDesc": "DelPlantDesc4",
+        "CreationDate": "2025-08-10",
+        "RecPlantDesc": "Singapore",
+        "DelPlantDesc": "Malaysia",
         "Status": "Delivered",
-        "OrderID": 864278382,
-        "RecPlantID": 1488663592,
-        "DelPlantID": 530066334
+        "OrderID": 12204,
+        "RecPlantID": 9101,
+        "DelPlantID": 9102
     },
     {
-        "CreationDate": "/Date(199268750000)/",
-        "RecPlantDesc": "RecPlantDesc5",
-        "DelPlantDesc": "DelPlantDesc5",
-        "Status": "Delivered",
-        "OrderID": 409562974,
-        "RecPlantID": 2101998722,
-        "DelPlantID": 750725370
-    },
-    {
-        "CreationDate": "/Date(1285830716000)/",
-        "RecPlantDesc": "RecPlantDesc6",
-        "DelPlantDesc": "DelPlantDesc6",
+        "CreationDate": "2025-08-15",
+        "RecPlantDesc": "Singapore",
+        "DelPlantDesc": "Malaysia",
         "Status": "Created",
-        "OrderID": 1068395281,
-        "RecPlantID": 1325808964,
-        "DelPlantID": 1958633952
+        "OrderID": 12205,
+        "RecPlantID": 9101,
+        "DelPlantID": 9102
     },
     {
-        "CreationDate": "/Date(789544125000)/",
-        "RecPlantDesc": "RecPlantDesc7",
-        "DelPlantDesc": "DelPlantDesc7",
+        "CreationDate": "2025-08-16",
+        "RecPlantDesc": "Singapore",
+        "DelPlantDesc": "Malaysia",
         "Status": "Released",
-        "OrderID": 1288278027,
-        "RecPlantID": 1886569289,
-        "DelPlantID": 1142085058
-    },
-    {
-        "CreationDate": "/Date(1068144135000)/",
-        "RecPlantDesc": "RecPlantDesc8",
-        "DelPlantDesc": "DelPlantDesc8",
-        "Status": "Partially Completed",
-        "OrderID": 1798323616,
-        "RecPlantID": 1609074287,
-        "DelPlantID": 686754306
-    },
-    {
-        "CreationDate": "/Date(154727751000)/",
-        "RecPlantDesc": "RecPlantDesc9",
-        "DelPlantDesc": "DelPlantDesc9",
-        "Status": "Delivered",
-        "OrderID": 968768938,
-        "RecPlantID": 1699600505,
-        "DelPlantID": 1316748346
-    },
-    {
-        "CreationDate": "/Date(1207774274000)/",
-        "RecPlantDesc": "RecPlantDesc10",
-        "DelPlantDesc": "DelPlantDesc10",
-        "Status": "Delivered",
-        "OrderID": 120139722,
-        "RecPlantID": 612795583,
-        "DelPlantID": 1635712260
+        "OrderID": 12206,
+        "RecPlantID": 9101,
+        "DelPlantID": 9102
     }
-
 ]

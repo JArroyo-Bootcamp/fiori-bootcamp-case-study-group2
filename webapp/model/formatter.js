@@ -4,6 +4,11 @@ sap.ui.define([
     "use strict";
     return {
 
+        /**
+         * Determines the value state based on the provided 
+         * @param {string} sValue - status value to evaluate
+         * @returns 
+         */        
          statusValueState: function(sValue) {
             if(sValue === "Released") {
                 return "Warning";
