@@ -2,7 +2,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
 
-    <Dialog id="dlgSelectProduct" title="Select Product">
+    <Dialog id="dlgSelectProduct" title="{i18n>dialogSelectProductTitle}">
         <VBox id="vboxdialog">
             <List
                 id="productList"
@@ -16,10 +16,10 @@
             </List>
         </VBox>
         <beginButton>
-            <Button id="btnSelectProduct" text="Select" press=".onConfirmProductSelection" />
+            <Button id="btnSelectProduct" text="{i18n>dialogSelectButtonText}"  press=".onConfirmProductSelection" />
         </beginButton>
         <endButton>
-            <Button id="btnCloseDialog" text="Close" press=".onProductDialogClose" />
+            <Button id="btnCloseDialog" text="{i18n>dialogCloseButtonText}"  press=".onProductDialogClose" />
         </endButton>
     </Dialog>
 </core:FragmentDefinition>
