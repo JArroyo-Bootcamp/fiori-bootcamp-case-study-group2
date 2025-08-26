@@ -1,0 +1,105 @@
+<mvc:View xmlns:tnt="sap.tnt" 
+    controllerName="casestudygroup2.controller.CreateOrderPage"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+    <Page id="page1"
+        floatingFooter="true"
+        title="Create Order" >
+        <content>
+            <VBox id="vbox" class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormToolbar"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    labelSpanXL="4"
+                    labelSpanL="3"
+                    labelSpanM="4"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="4"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                    ariaLabelledBy="Title1" >
+                    
+                    <f:toolbar>
+                        <Toolbar id="TB1">
+                            <Title id="Title1" text="{i18n>headerOrderDetail}"/>         
+                        </Toolbar>
+                    </f:toolbar>
+                    <f:content>
+                        <Toolbar id="toolBar1" ariaLabelledBy="Title2">
+                            <ToolbarSpacer id="toolSpacer1" />
+                        </Toolbar>
+                        <Label id="receivingPlant" text="{i18n>main.RecPlant}" />
+                        <Input
+                            id="RecPlantInput"
+                            type="Text"
+                            value=""
+                            showValueHelp="true"
+                            valueHelpRequest="onReceivingPlant"                      
+                            width="28rem"
+                            required="true" />
+
+                        <Label id="deliveringPlant" text="{i18n>main.DelPlant}" />
+                        <Input
+                            id="DelPlantInput"
+                            type="Text"
+                            value=""
+                            showValueHelp="true"
+                            valueHelpRequest="onDeliveringPlant"
+                            class="sapUiSmallMarginBottom"
+                            width="28rem" 
+                            required="true"/>
+                    </f:content>
+                </f:SimpleForm>
+                
+                <ToolbarSpacer id="spacer2"/>
+                <Toolbar id="TB2" height="50px" class="sapUiSmallMargintop">     
+                    <Title id="productTittle" text="{i18n>products}"  />               
+                <ToolbarSpacer id="spacer3" />
+                    <Button id="add"    icon="sap-icon://add"     type="Transparent" press="addPress" />   
+                    <Button id="delete" icon="sap-icon://delete"  type="Transparent" press="deletePress" />           
+                </Toolbar> 
+                
+                
+                <Table id="productTable1" mode="MultiSelect">   
+                    <columns>
+                        <Column id="prodColumn1"
+                        width="12em">                                       
+				            <Text id="productColumnName" text="{i18n>productName}" />
+                        </Column>
+                            
+                        <Column id="prodColumn2"
+                        width="12em">
+				            <Text id="productColumnQuantity" text="{i18n>productQuantity}" />
+                        </Column>
+
+                        <Column id="prodColumn3"
+                        width="12em">
+				            <Text id="productColumnPrice" text="{i18n>productPricePerQuantity}" />
+                        </Column>
+
+                        <Column id="prodColumn4"
+                        width="12em">
+				            <Text id="productColumnTotalPrice" text="{i18n>productTotalPrice}" />
+                        </Column>
+                    </columns>
+                </Table>              
+            </VBox>         
+        </content>
+        <footer>
+            <Toolbar id="toolbarFooter">
+            <ToolbarSpacer id="footerToolBar"/>
+                <Button id="save"   type="Emphasized" text="{i18n>save}" press="onPress" />
+                <Button id="cancel" type="Reject"     text="{i18n>cancel}" press="onPress" />
+            </Toolbar>
+		</footer>
+    </Page>
+</mvc:View>
