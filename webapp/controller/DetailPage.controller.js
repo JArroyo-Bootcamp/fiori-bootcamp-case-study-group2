@@ -26,6 +26,12 @@ sap.ui.define([
         onPressDetailCancel: function () {
             var oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteOrderMainPage");
-        }
+        },
+        //navigates Order Edit Page
+        onEditPress: function () {
+            const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            const sOrderID = this.getView().getBindingContext().getProperty("OrderID");
+            oRouter.navTo("RouteEditPage", { OrderID: sOrderID });
+        },
     });
 });

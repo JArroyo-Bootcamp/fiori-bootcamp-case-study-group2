@@ -50,7 +50,7 @@
         <footer>
             <Toolbar id="detailPageToolbar">
                 <ToolbarSpacer id="idtbSpacer"/>
-                <Button id="btnProductDetailEdit" text="Edit" type="Emphasized" press=".onDetailEditPress" />
+                <Button id="btnProductDetailEdit" text="Edit" type="Emphasized" press=".onEditPress" />
                 <Button id="btnproductDetailCancel" text="Cancel" press=".onPressDetailCancel" />
             </Toolbar>
         </footer>

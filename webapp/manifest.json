@@ -102,6 +102,13 @@
           "target": [
             "TargetDetailPage"
           ]
+        },
+        {
+          "name": "RouteEditPage",              
+          "pattern": "OrderEditPage/{OrderID}", 
+          "target": [
+            "TargetOrderEditPage"
+          ]
         }
       ],
       "targets": {
@@ -112,6 +119,11 @@
         "TargetDetailPage": {
           "id": "DetailPage",
           "name": "DetailPage",
+          "viewType": "XML"
+        },
+        "TargetOrderEditPage": {                
+          "id": "OrderEditPage",
+          "name": "OrderEditPage",
           "viewType": "XML"
         }
       }
