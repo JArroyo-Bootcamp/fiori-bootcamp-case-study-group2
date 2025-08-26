@@ -1,82 +1,10 @@
 [
     {
-        "RecPlantID": 226571191,
-        "RecPlantDesc": "RecPlantDesc1"
+        "RecPlantID": 9101,
+        "RecPlantDesc": "Singapore"
     },
     {
-        "RecPlantID": 514545892,
-        "RecPlantDesc": "RecPlantDesc2"
-    },
-    {
-        "RecPlantID": 965884614,
-        "RecPlantDesc": "RecPlantDesc3"
-    },
-    {
-        "RecPlantID": 1488663592,
-        "RecPlantDesc": "RecPlantDesc4"
-    },
-    {
-        "RecPlantID": 2101998722,
-        "RecPlantDesc": "RecPlantDesc5"
-    },
-    {
-        "RecPlantID": 1325808964,
-        "RecPlantDesc": "RecPlantDesc6"
-    },
-    {
-        "RecPlantID": 1886569289,
-        "RecPlantDesc": "RecPlantDesc7"
-    },
-    {
-        "RecPlantID": 1609074287,
-        "RecPlantDesc": "RecPlantDesc8"
-    },
-    {
-        "RecPlantID": 1699600505,
-        "RecPlantDesc": "RecPlantDesc9"
-    },
-    {
-        "RecPlantID": 612795583,
-        "RecPlantDesc": "RecPlantDesc10"
-    },
-    {
-        "RecPlantID": 1768771767,
-        "RecPlantDesc": "RecPlantDesc11"
-    },
-    {
-        "RecPlantID": 478444200,
-        "RecPlantDesc": "RecPlantDesc12"
-    },
-    {
-        "RecPlantID": 446135234,
-        "RecPlantDesc": "RecPlantDesc13"
-    },
-    {
-        "RecPlantID": 1935413062,
-        "RecPlantDesc": "RecPlantDesc14"
-    },
-    {
-        "RecPlantID": 1015942314,
-        "RecPlantDesc": "RecPlantDesc15"
-    },
-    {
-        "RecPlantID": 760662215,
-        "RecPlantDesc": "RecPlantDesc16"
-    },
-    {
-        "RecPlantID": 351974666,
-        "RecPlantDesc": "RecPlantDesc17"
-    },
-    {
-        "RecPlantID": 2061806441,
-        "RecPlantDesc": "RecPlantDesc18"
-    },
-    {
-        "RecPlantID": 1030758211,
-        "RecPlantDesc": "RecPlantDesc19"
-    },
-    {
-        "RecPlantID": 1496518109,
-        "RecPlantDesc": "RecPlantDesc20"
+        "RecPlantID": 1209197804,
+        "RecPlantDesc": "Switzerland"
     }
 ]
