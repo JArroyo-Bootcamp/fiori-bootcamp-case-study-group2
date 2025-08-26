@@ -4,34 +4,32 @@
     xmlns:l="sap.ui.layout"
     xmlns="sap.m">
     <Page id="detailPage" title="{i18n>titleDetailPage}" floatingFooter="true">
-
     <VBox id="idVBox1" class="sapUiMediumMarginTop sapUiLargeMarginBeginEnd sapUiSmallMarginBottom">
-        <Panel id="orderDetailPanel" headerText="{i18n>txtOrderDetail}">
+        <Panel id="orderDetailPanel" headerText="{i18n>headerOrderDetail}">
         <content>
                 <form:SimpleForm id="orderDetailForm1" editable="false" layout="ResponsiveLayout" class="sapUiLargeMarginStart">
-                    <Label id="lblOrderNumberID" text="Order Number" />
+                    <Label id="lblOrderNumberID" text="{i18n>orderNumber}" />
                     <Text id="selectedOrderNumberID" text="{OrderID}" />
-                    <Label id="lblCreationDate" text="Created On" />
+                    <Label id="lblCreationDate" text="{i18n>createdOn}" />
                     <Text id="selectedCreationDate" text="{path: 'CreationDate', formatter: '.formatter.dateFormatter'}"/>
-                    <Label id="lblReceivingPlant" text="Receiving Plant" />
+                    <Label id="lblReceivingPlant" text="{i18n>recPlant}" />
                     <Text id="selectedReceivingPlant" text="{RecPlantID} - {RecPlantDesc}" />
-                    <Label id="lblDeliveringPlant" text="Delivering Plant" />
+                    <Label id="lblDeliveringPlant" text="{i18n>delPlant}" />
                     <Text id="selectedDeliveringPlant" text="{DelPlantID} - {DelPlantDesc}" />
-                    <Label id="lblStatus" text="Status" />
+                    <Label id="lblStatus" text="{i18n>status}" />
                     <ObjectStatus id="selectedStatus" text="{Status}" state="{ path: 'Status', formatter: '.formatter.statusValueState' }" />
                 </form:SimpleForm>
         </content>
         </Panel>
     </VBox>
-
     <VBox id="idVBox2" class="sapUiLargeMarginBeginEnd">
         <Panel id="productPanel" headerText="{path: 'OrderItems', formatter: '.formatter.productCounter'}" class="sapUIResponsiveMargin" width="auto">
             <Table id="productTable" inset="false" items="{path: 'OrderItems'}">
                 <columns>
-                    <Column id="colProductName"> <Text id="txtProductName" text="Product Name" /></Column>
-                    <Column id="colQuantity"> <Text id="txtProductQuantity" text="Quantity" /></Column>
-                    <Column id="colPricePerQuality"> <Text id="txtProductPricePerQuantity" text="Price Per Quantity" /></Column>
-                    <Column id="colTotalPrice"> <Text id="txtProductTotalPrice" text="Total Price" /></Column>
+                    <Column id="colProductName"> <Text id="txtProductName" text="{i18n>productName}" /></Column>
+                    <Column id="colQuantity"> <Text id="txtProductQuantity" text="{i18n>productQuantity}" /></Column>
+                    <Column id="colPricePerQuality"> <Text id="txtProductPricePerQuantity" text="{i18n>productPricePerQuantity}" /></Column>
+                    <Column id="colTotalPrice"> <Text id="txtProductTotalPrice" text="{i18n>productTotalPrice}" /></Column>
                 </columns>
                 <items>
                     <ColumnListItem id="clmnListProducts">
@@ -46,14 +44,12 @@
             </Table>
         </Panel>
     </VBox>
-
         <footer>
             <Toolbar id="detailPageToolbar">
                 <ToolbarSpacer id="idtbSpacer"/>
-                <Button id="btnProductDetailEdit" text="Edit" type="Emphasized" press=".onEditPress" />
-                <Button id="btnproductDetailCancel" text="Cancel" press=".onPressDetailCancel" />
+                <Button id="btnProductDetailEdit" text="{i18n>btnEdit}" type="Emphasized" press=".onEditPress" />
+                <Button id="btnproductDetailCancel" text="{i18n>btnCancel}" press=".onPressDetailCancel" />
             </Toolbar>
         </footer>
-
     </Page>
 </mvc:View>
