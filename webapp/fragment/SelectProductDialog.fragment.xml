@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog id="dlgSelectProduct" title="{i18n>dialogSelectProductTitle}">
+        <VBox id="vboxdialog">
+            <List
+                id="productList"
+                mode="SingleSelectMaster"
+                items="{/OrderItems}">
+                <StandardListItem
+                    id="standardLItem01"
+                    title="{ProductName}"
+                    description="{Quantity}"
+                    type="Active" />
+            </List>
+        </VBox>
+        <beginButton>
+            <Button id="btnSelectProduct" text="{i18n>dialogSelectButtonText}"  press=".onConfirmProductSelection" />
+        </beginButton>
+        <endButton>
+            <Button id="btnCloseDialog" text="{i18n>dialogCloseButtonText}"  press=".onProductDialogClose" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
