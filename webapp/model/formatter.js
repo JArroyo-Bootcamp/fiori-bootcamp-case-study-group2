@@ -43,6 +43,18 @@ sap.ui.define([
             return oDateFormat.format(oDate);
         },
 
+        onUpdateOrders: function(oEvent) {
+            var iTotalItems = oEvent.getParameter("total");
+            var oTitle = this.byId("txtOrder");
+    
+            // Update the title text with count
+            if (iTotalItems) {
+                oTitle.setText("Orders (" + iTotalItems + ")");
+            } else {
+                oTitle.setText("Orders");
+            }
+        },
+
         productCounter: function(aOrderItems) {
             if (!aOrderItems) {
                 return "Product (0)";
