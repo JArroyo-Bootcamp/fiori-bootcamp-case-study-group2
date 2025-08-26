@@ -41,6 +41,19 @@ sap.ui.define([
             });
 
             return oDateFormat.format(oDate);
+        },
+
+        productCounter: function(aOrderItems) {
+            if (!aOrderItems) {
+                return "Product (0)";
+            }
+            return "Product (" + aOrderItems.length + ")";
+        },
+
+        totalPriceFormatter: function (iQuantity, fPricePerQty) {
+            var qty = parseFloat(iQuantity) || 0;
+            var price = parseFloat(fPricePerQty) || 0;
+            return (qty * price).toFixed(2);
         }
 
     };

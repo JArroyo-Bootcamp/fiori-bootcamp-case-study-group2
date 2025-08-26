@@ -14,6 +14,17 @@ sap.ui.define([
             oView.byId("oderNumberInput").setValue("");
             oView.byId("creationDateInput").setValue("");
             oView.byId("statusMCB").removeAllSelectedItems();
+        },
+
+        onPressOrder: function (oEvent) {
+            var oItem = oEvent.getSource();  
+            var oContext = oItem.getBindingContext();
+            var sOrderId = oContext.getProperty("OrderID");
+
+            // Navigate to the detail page
+            this.getOwnerComponent().getRouter().navTo("RouteDetailPage", {
+                OrderID: sOrderId
+            });
         }
     });
 });

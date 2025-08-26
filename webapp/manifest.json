@@ -95,12 +95,24 @@
           "target": [
             "TargetOrderMainPage"
           ]
+        },
+        {
+          "name": "RouteDetailPage",
+          "pattern": "OrderDetail/{OrderID}",
+          "target": [
+            "TargetDetailPage"
+          ]
         }
       ],
       "targets": {
         "TargetOrderMainPage": {
           "id": "OrderMainPage",
           "name": "OrderMainPage"
+        },
+        "TargetDetailPage": {
+          "id": "DetailPage",
+          "name": "DetailPage",
+          "viewType": "XML"
         }
       }
     },
