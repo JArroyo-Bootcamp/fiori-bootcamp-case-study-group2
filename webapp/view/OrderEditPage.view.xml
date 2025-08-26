@@ -1,0 +1,83 @@
+<mvc:View controllerName="casestudygroup2.controller.OrderEditPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+
+    <Page id="editPage" title="Edit Order" floatingFooter="true">
+
+        <!-- Order Details Section -->
+        <VBox id="vbOrderEdit" class="sapUiMediumMarginTop sapUiLargeMarginBeginEnd sapUiSmallMarginBottom">
+            <Panel id="pnlOrderEditInfo" headerText="Order Details">
+                <content>
+                    <form:SimpleForm id="orderEditForm" editable="true" layout="ResponsiveLayout" class="sapUiLargeMarginStart">
+                        <Label id="lblOrderNumberE" text="Order Number" />
+                        <Input id="inpOrderNumberE" value="{OrderID}" editable="false" width="60%" />
+
+                        <Label id="lblCreatedOnE" text="Created On" />
+                        <Input id="inpCreatedOnE" value="{path: 'CreationDate', formatter: '.formatter.dateFormatter'}" editable="false" width="60%" />
+
+                        <Label id="lblReceivingPlantE" text="Receiving Plant" />
+                        <Input id="inpReceivingPlantE" value="{RecPlantID} - {RecPlantDesc}" editable="false" width="60%" />
+
+                        <Label id="lblDeliveringPlantE" text="Delivering Plant" />
+                        <Input id="inpDeliveringPlantE" value="{DelPlantID} - {DelPlantDesc}" editable="false" width="60%" />
+
+                        <Label id="lblStatusE" text="Status" />
+                        <ComboBox id="statusMCBEdit" width="60%" selectedKey="{Status}">
+                            <core:Item id="itemCreatedE" key="Created" text="Created"/>
+                            <core:Item id="itemReleasedE" key="Released" text="Released"/>
+                            <core:Item id="itemPartialCompE" key="Partially Completed" text="Partially Completed"/>
+                            <core:Item id="itemDeliveredE" key="Delivered" text="Delivered"/>
+                        </ComboBox>
+                    </form:SimpleForm>
+                </content>
+            </Panel>
+        </VBox>
+
+        <!-- Product Section -->
+        <VBox id="vbProductEdit" class="sapUiLargeMarginBeginEnd">
+            <Panel id="productPanelEdit" 
+                headerText="{parts: [{path: 'OrderItems'}], formatter: '.formatter.productCounter'}"
+                class="sapUIResponsiveMargin" 
+                width="auto">
+                <headerToolbar>
+                    <Toolbar id="tbProductEdit">
+                        <Title id="titleProductEdit" text="{parts: [{path: 'OrderItems'}], formatter: '.formatter.productCounter'}" />
+                        <ToolbarSpacer id="tbSpacerProductEdit"/>
+                        <Button id="btnAddProductE" icon="sap-icon://add" type="Transparent" press="onAddProduct" tooltip="Add Product" />
+                        <Button id="btnDeleteProductE" icon="sap-icon://delete" type="Transparent" press="onDeleteProduct" tooltip="Delete Product" />
+                    </Toolbar>
+                </headerToolbar>
+                <Table id="tblProductEdit" items="{OrderItems}" inset="false" mode="MultiSelect">
+                    <columns>
+                        <Column id="colProductNameE"><Text id="txtColProductNameE" text="Product Name" /></Column>
+                        <Column id="colQuantityE"><Text id="txtColQuantityE" text="Quantity" /></Column>
+                        <Column id="colPricePerQtyE"><Text id="txtColPricePerQtyE" text="Price Per Quantity" /></Column>
+                        <Column id="colTotalPriceE"><Text id="txtColTotalPriceE" text="Total Price" /></Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem id="cliProductE" type="Active">
+                            <cells>
+                                <Text id="txtProductNameE" text="{ProductName}" />
+                                <Text id="txtQuantityE" text="{Quantity}" />
+                                <Text id="txtPricePerQtyE" text="{PricePerQty}" />
+                                <Text id="txtProductTotalPriceE" text="{parts: [{ path: 'Quantity' }, { path: 'PricePerQty' }], formatter: '.formatter.totalPriceFormatter'}" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+        </VBox>
+
+        <!-- Footer -->
+        <footer>
+            <Toolbar id="tbFooterE">
+                <ToolbarSpacer id="tbsFooterE" />
+                <Button id="btnSaveE" text="Save" type="Emphasized" press="onSavePress" />
+                <Button id="btnCancelE" text="Cancel" type="Reject" press="onCancelPress" />
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>

@@ -1,0 +1,59 @@
+<mvc:View controllerName="casestudygroup2.controller.DetailPage"
+    xmlns:form="sap.ui.layout.form" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+    <Page id="detailPage" title="{i18n>titleDetailPage}" floatingFooter="true">
+
+    <VBox id="idVBox1" class="sapUiMediumMarginTop sapUiLargeMarginBeginEnd sapUiSmallMarginBottom">
+        <Panel id="orderDetailPanel" headerText="{i18n>txtOrderDetail}">
+        <content>
+                <form:SimpleForm id="orderDetailForm1" editable="false" layout="ResponsiveLayout" class="sapUiLargeMarginStart">
+                    <Label id="lblOrderNumberID" text="Order Number" />
+                    <Text id="selectedOrderNumberID" text="{OrderID}" />
+                    <Label id="lblCreationDate" text="Created On" />
+                    <Text id="selectedCreationDate" text="{path: 'CreationDate', formatter: '.formatter.dateFormatter'}"/>
+                    <Label id="lblReceivingPlant" text="Receiving Plant" />
+                    <Text id="selectedReceivingPlant" text="{RecPlantID} - {RecPlantDesc}" />
+                    <Label id="lblDeliveringPlant" text="Delivering Plant" />
+                    <Text id="selectedDeliveringPlant" text="{DelPlantID} - {DelPlantDesc}" />
+                    <Label id="lblStatus" text="Status" />
+                    <ObjectStatus id="selectedStatus" text="{Status}" state="{ path: 'Status', formatter: '.formatter.statusValueState' }" />
+                </form:SimpleForm>
+        </content>
+        </Panel>
+    </VBox>
+
+    <VBox id="idVBox2" class="sapUiLargeMarginBeginEnd">
+        <Panel id="productPanel" headerText="{path: 'OrderItems', formatter: '.formatter.productCounter'}" class="sapUIResponsiveMargin" width="auto">
+            <Table id="productTable" inset="false" items="{path: 'OrderItems'}">
+                <columns>
+                    <Column id="colProductName"> <Text id="txtProductName" text="Product Name" /></Column>
+                    <Column id="colQuantity"> <Text id="txtProductQuantity" text="Quantity" /></Column>
+                    <Column id="colPricePerQuality"> <Text id="txtProductPricePerQuantity" text="Price Per Quantity" /></Column>
+                    <Column id="colTotalPrice"> <Text id="txtProductTotalPrice" text="Total Price" /></Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="clmnListProducts">
+                        <cells>
+                            <Text id="txtProductNameDetail" text="{ProductName}" />
+                            <Text id="txtProductQuantityDetail" text="{Quantity}" />
+                            <Text id="txtProductPricePerQuantityDetail" text="{PricePerQty}" />
+                            <Text id="txtProductTotalPriceDetail" text="{parts: [{ path: 'Quantity' }, { path: 'PricePerQty' }], formatter: '.formatter.totalPriceFormatter'}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </Panel>
+    </VBox>
+
+        <footer>
+            <Toolbar id="detailPageToolbar">
+                <ToolbarSpacer id="idtbSpacer"/>
+                <Button id="btnProductDetailEdit" text="Edit" type="Emphasized" press=".onEditPress" />
+                <Button id="btnproductDetailCancel" text="Cancel" press=".onPressDetailCancel" />
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>

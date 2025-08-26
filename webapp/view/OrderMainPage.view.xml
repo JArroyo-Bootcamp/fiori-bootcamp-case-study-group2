@@ -10,7 +10,7 @@
         <f:DynamicPageHeader id="dynamicPageHeader">
         <f:content>
 
-        <fb:FilterBar id="filterBar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad" showClearOnFB="true" showFilterConfiguration="false" clear=".onClear">
+        <fb:FilterBar id="filterBar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" showClearOnFB="true" showFilterConfiguration="false" clear=".onClear">
             <fb:filterGroupItems>
                 <fb:FilterGroupItem id="filterGroupItem1" name="OrderNumber" label="Order Number" groupName="Group1" visibleInFilterBar="true">
                     <fb:control>
@@ -42,7 +42,7 @@
         </f:header>        
 
         <f:content>
-        <Table id="tblOrders" mode="MultiSelect" items="{ path: '/Orders', sorter: { path: 'OrderID'} }"> 
+        <Table id="tblOrders" mode="MultiSelect" items="{ path: '/Orders', sorter: { path: 'OrderID'} }" updateFinished=".formatter.onUpdateOrders"> 
         <headerToolbar>
             <Toolbar id="tbOrder">
                 <Text id="txtOrder" text="Orders"/>
@@ -71,7 +71,7 @@
         </columns>
 
         <items>
-            <ColumnListItem id="clistOrders" vAlign="Middle" type="Navigation" press="onPressOrder">
+            <ColumnListItem id="clistOrders" vAlign="Middle" type="Navigation" press=".onPressOrder">
                 <cells>
                     <Text id="colOrderNum" text="{OrderID}"/>
                     <Text id="colCreateDat" text="{path: 'CreationDate', formatter: '.formatter.dateFormatter'}"/>
