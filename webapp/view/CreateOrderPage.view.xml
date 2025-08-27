@@ -59,44 +59,44 @@
                             required="true"/>
                     </f:content>
                 </f:SimpleForm>
-                
-                <ToolbarSpacer id="spacer2"/>
-                <Toolbar id="TB2" height="50px" class="sapUiSmallMargintop">     
-                    <Title id="productTittle" text="{i18n>products}"  />               
-                <ToolbarSpacer id="spacer3" />
-                    <Button id="add"    icon="sap-icon://add"     type="Transparent" press="addPress" />   
-                    <Button id="delete" icon="sap-icon://delete"  type="Transparent" press="deletePress" />           
-                </Toolbar> 
-                
-                
-                <Table id="productTable1" mode="MultiSelect">   
+
+                <Panel id="productPanelCO" 
+                headerText="{parts: [{path: 'OrderItems'}], formatter: '.formatter.productCounter'}"
+                class="sapUIResponsiveMargin" 
+                width="auto">
+                <headerToolbar>
+                    <Toolbar id="tbProductCO">
+                        <Title id="titleProductCO" text="{parts: [{path: 'OrderItems'}], formatter: '.formatter.productCounter'}" />
+                        <ToolbarSpacer id="tbSpacerProductCO"/>
+                        <Button id="btnAddProductCO" icon="sap-icon://add" type="Transparent" press="onAddProduct" tooltip="{i18n>addProduct}" />
+                        <Button id="btnDeleteProductCO" icon="sap-icon://delete" type="Transparent" press="onDeleteProduct" tooltip="{i18n>deleteProduct}" />
+                    </Toolbar>
+                </headerToolbar>
+                <Table id="tblProductCO" items="{OrderItems}" inset="false" mode="MultiSelect">
                     <columns>
-                        <Column id="prodColumn1"
-                        width="12em">                                       
-				            <Text id="productColumnName" text="{i18n>productName}" />
-                        </Column>
-                            
-                        <Column id="prodColumn2"
-                        width="12em">
-				            <Text id="productColumnQuantity" text="{i18n>productQuantity}" />
-                        </Column>
-
-                        <Column id="prodColumn3"
-                        width="12em">
-				            <Text id="productColumnPrice" text="{i18n>productPricePerQuantity}" />
-                        </Column>
-
-                        <Column id="prodColumn4"
-                        width="12em">
-				            <Text id="productColumnTotalPrice" text="{i18n>productTotalPrice}" />
-                        </Column>
+                        <Column id="colProductNameCO"><Text id="txtColProductNameCO" text="{i18n>productName}" /></Column>
+                        <Column id="colQuantityCO"><Text id="txtColQuantityCO" text="{i18n>quantity}" /></Column>
+                        <Column id="colPricePerQtyCO"><Text id="txtColPricePerQtyCO" text="{i18n>pricePerQuantity}" /></Column>
+                        <Column id="colTotalPriceCO"><Text id="txtColTotalPriceCO" text="{i18n>totalPrice}" /></Column>
                     </columns>
-                </Table>              
-            </VBox>         
-        </content>
+                    <items>
+                        <ColumnListItem id="cliProductCO" type="Active">
+                            <cells>
+                                <Text id="txtProductNameCO" text="{ProductName}" />
+                                <Text id="txtQuantityCO" text="{Quantity}" />
+                                <Text id="txtPricePerQtyCO" text="{PricePerQty}" />
+                                <Text id="txtProductTotalPriceCO" text="{parts: [{ path: 'Quantity' }, { path: 'PricePerQty' }], formatter: '.formatter.totalPriceFormatter'}" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+                                 
+                </VBox>         
+            </content>       
         <footer>
             <Toolbar id="toolbarFooter">
-            <ToolbarSpacer id="footerToolBar"/>
+               <ToolbarSpacer id="footerToolBar"/>
                 <Button id="save"   type="Emphasized" text="{i18n>save}" press="onPress" />
                 <Button id="cancel" type="Reject"     text="{i18n>cancel}" press="onPress" />
             </Toolbar>
