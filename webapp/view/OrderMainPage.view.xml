@@ -56,19 +56,19 @@
 
         <columns>
             <Column id="colIDOrderNum">
-                <Text id="txtOrderNum" text="Order Number" />
+                <Text id="txtOrderNum" text="{i18n>main.orderNumber}" />
             </Column>
             <Column id="colIDCreateDate">
-                <Text id="txtCreateDate" text="Creation Date" />
+                <Text id="txtCreateDate" text="{i18n>main.CreationDate}" />
             </Column>
             <Column id="colIDRecPlant">
-                <Text id="txtRecPlant" text="Receiving Plant" />
+                <Text id="txtRecPlant" text="{i18n>main.RecPlant}" />
             </Column>
             <Column id="colIDDelPlant">
-                <Text id="txtDelPlant" text="Delivering Plant" />
+                <Text id="txtDelPlant" text="{i18n>main.DelPlant}" />
             </Column>
             <Column id="colIDStatus">
-                <Text id="txtStatus" text="Status" />
+                <Text id="txtStatus" text="{i18n>main.Status}" />
             </Column>
         </columns>
 
