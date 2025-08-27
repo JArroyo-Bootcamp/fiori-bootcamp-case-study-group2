@@ -199,6 +199,43 @@ sap.ui.define([
             oList.getBinding("items").filter([]);
         },
 
+        onConfirmProductSelection: function () {
+            let oView = this.getView();
+            let oDialog = this._oProductDialog;
+            let oList = oDialog.byId("productList");
+            let aSelectedItems = oList.getSelectedItems();
+            let oModel = this._oModel;
+ 
+            let sOrderID = this._sOrderID;
+            let aOrderItems = oModel.getProperty("/OrderItems") || [];
+ 
+            aSelectedItems.forEach(function (oItem) {
+                let oProduct = oItem.getBindingContext().getObject();
+ 
+                let sRandomSuffix = Math.floor(Math.random() * 1000);
+                let sUniqueProductName = oProduct.ProductName + "_" + sRandomSuffix;
+ 
+                // create new OrderItemSelected
+                let oNewItem = {
+                    OrderID: sOrderID,
+                    ProductName: sUniqueProductName,
+                    Quantity: oProduct.Quantity || 1,
+                    PricePerQty: oProduct.PricePerQty || 0,
+                    TotalPrice: (oProduct.Quantity || 1) * (oProduct.PricePerQty || 0)
+                };
+ 
+                // add new item to OrderItems
+                aOrderItems.push(oNewItem);
+            });
+ 
+            // update the model
+            oModel.setProperty("/OrderItems", aOrderItems);
+            oModel.refresh(true);
+ 
+            // close dialog
+            oDialog.close();
+        },
+
         onProductDialogClose: function () {
             // for click close
             if (this._oProductDialog) {
